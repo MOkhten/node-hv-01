@@ -8,3 +8,8 @@
 <h3>node index.js --action get --id 5 </h2>
 <a href='https://ibb.co/NnM0nR0'>https://ibb.co/NnM0nR0</a>
 <img src = 'https://i.ibb.co/R4qX48X/Screenshot-2.png' max-width = '100%' />
+
+<h2 align="left">Add contact and print it to console table</h1> 
+<h3>node index --action add --name Mango --email mango@gmail.com --phone 322-22-22</h2>
+<a href='https://ibb.co/Br1ndTC'>https://ibb.co/Br1ndTC</a>
+<img src = 'https://i.ibb.co/s6BWksV/Screenshot-3.png' max-width = '100%' />
