@@ -25,11 +25,12 @@ async function getContactById(contactId) {
 }
 
 async function removeContact(contactId) {
-    try {
-        const contacts = await listContacts();
-    const changeContact = contacts.filter(e => e.id !== contactId);
-    await fs.writeFile(contactsPath, JSON.stringify(changeContact));
-    return changeContact;
+  try {
+  const contacts = await listContacts();
+   const changedContacts = contacts.filter(({ id }) => id !== contactId);
+    fs.writeFile(contactsPath, JSON.stringify(changedContacts));
+    return contacts.filter(({ id }) => id === contactId);
+   
     } catch (error) {
     console.log(error.message);
   }
@@ -39,10 +40,10 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
     try {
     const newContact = {
-        id: uid,
-        name: name,
-        email: email,
-        phone: phone,
+        id: uid(),
+        name,
+        email,
+        phone,
     }
     const contacts = await listContacts();
     contacts.push(newContact);

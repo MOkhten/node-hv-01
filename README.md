@@ -13,3 +13,6 @@
 <h3>node index --action add --name Mango --email mango@gmail.com --phone 322-22-22</h2>
 <a href='https://ibb.co/Br1ndTC'>https://ibb.co/Br1ndTC</a>
 <img src = 'https://i.ibb.co/s6BWksV/Screenshot-3.png' max-width = '100%' />
+
+<h2 align="left">Remove contact and print it to console table</h1> 
+<h3>node index --action remove --id 3</h2>
