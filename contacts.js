@@ -25,11 +25,38 @@ async function getContactById(contactId) {
 }
 
 async function removeContact(contactId) {
-    const contacts = await listContacts();
+    try {
+        const contacts = await listContacts();
     const changeContact = contacts.filter(e => e.id !== contactId);
     await fs.writeFile(contactsPath, JSON.stringify(changeContact));
+    return changeContact;
+    } catch (error) {
+    console.log(error.message);
+  }
+    
 }
 
 async function addContact(name, email, phone) {
-  const contacts = await listContacts();
+    try {
+    const newContact = {
+        id: uid,
+        name: name,
+        email: email,
+        phone: phone,
+    }
+    const contacts = await listContacts();
+    contacts.push(newContact);
+    await fs.writeFile(contactsPath, JSON.stringify(newContact));
+    return contacts;
+    } catch (error) {
+    console.log(error.message);
+  }
+   
 }
+
+module.exports = {
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
+};
