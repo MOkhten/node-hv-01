@@ -38,7 +38,6 @@ async function invokeAction({ action, id, name, email, phone }) {
       console.log(`Contact with id ${id} was removed!`.red);
       console.table(deleteContact);
       break;
-
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
