@@ -17,4 +17,4 @@
 <h2 align="left">Remove contact and print it to console table</h1> 
 <h3>node index --action remove --id 3</h2>
 <a href='https://ibb.co/tBfkPwR'>https://ibb.co/tBfkPwR</a>
-<img src = '	https://i.ibb.co/VVyrp06/Screenshot-4.png' max-width = '100%' />
+<img src = 'https://i.ibb.co/VVyrp06/Screenshot-4.png' max-width = '100%' />
